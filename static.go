@@ -46,6 +46,6 @@ func Error(err error, msg string, kv ...KV) {
 }
 
 // V returns a log writter at the specified level
-func V(level int) Writer {
+func V(level int) InfoWriter {
 	return loggers[defaultLogger].V(level)
 }
