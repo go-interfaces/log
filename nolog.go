@@ -10,6 +10,6 @@ func (l *NoLog) Info(msg string, kv ...KV) {}
 func (l *NoLog) Error(err error, msg string, kv ...KV) {}
 
 // V will return its same NoLog instance
-func (l *NoLog) V(int) Writer { return l }
+func (l *NoLog) V(int) InfoWriter { return l }
 
 var _ Logger = (*NoLog)(nil)

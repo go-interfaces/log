@@ -1,15 +1,16 @@
 package log
 
+// KV are key value pairs to be logged
 type KV map[string]interface{}
 
-// Writer for log messages
-type Writer interface {
+// InfoWriter for logs
+type InfoWriter interface {
 	Info(msg string, kv ...KV)
-	Error(err error, msg string, kv ...KV)
 }
 
-// Log messages and errors
+// Logger logs messages and errors
 type Logger interface {
-	Writer
-	V(int) Writer
+	InfoWriter
+	Error(err error, msg string, kv ...KV)
+	V(int) InfoWriter
 }
