@@ -49,3 +49,8 @@ func Error(err error, msg string, kv ...KV) {
 func V(level int) InfoWriter {
 	return loggers[defaultLogger].V(level)
 }
+
+// SetLevel at the default logger
+func SetLevel(level int) {
+	loggers[defaultLogger].SetLevel(level)
+}
