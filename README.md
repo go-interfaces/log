@@ -1,6 +1,6 @@
-# Log interface <img align="left" width="30px" src="https://avatars0.githubusercontent.com/u/47711035?s=400&u=e8a2891cca67da66972ad478069588deb0299e4b&v=4">
+# Log interface <img align="left" width="60px" src="https://avatars0.githubusercontent.com/u/47711035?s=400&u=e8a2891cca67da66972ad478069588deb0299e4b&v=4">
 
-
+Logger interface allows you to switch between loggers implementations at Go projects.
 
 
 
