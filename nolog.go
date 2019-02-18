@@ -12,4 +12,7 @@ func (l *NoLog) Error(err error, msg string, kv ...KV) {}
 // V will return its same NoLog instance
 func (l *NoLog) V(int) InfoWriter { return l }
 
+// SetLevel wont do anything
+func (l *NoLog) SetLevel(int) {}
+
 var _ Logger = (*NoLog)(nil)

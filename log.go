@@ -1,7 +1,6 @@
 package log
 
 // KV are key value pairs to be logged
-// type KV map[string]interface{}
 type KV struct {
 	K string
 	V interface{}
@@ -16,5 +15,6 @@ type InfoWriter interface {
 type Logger interface {
 	InfoWriter
 	Error(err error, msg string, kv ...KV)
+	SetLevel(int)
 	V(int) InfoWriter
 }
