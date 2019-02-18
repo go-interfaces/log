@@ -1,4 +1,4 @@
-# Log interface <img align="left" width="30px" src="https://user-images.githubusercontent.com/9891289/52919268-d8185280-3300-11e9-9a46-0b4eb3be6803.png">
+# Log interface <img align="left" width="30px" src="https://avatars0.githubusercontent.com/u/47711035?s=400&u=e8a2891cca67da66972ad478069588deb0299e4b&v=4">
 
 
 
