@@ -31,7 +31,7 @@ func TestNoLog(t *testing.T) {
 	nl.Error(
 		errors.New("test error"),
 		"message for test error",
-		KV{"a": "1"}, KV{"b": "2"},
+		KV{"a", "1"}, KV{"b", "2"},
 	)
 	wOut.Close()
 	wErr.Close()

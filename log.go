@@ -1,7 +1,11 @@
 package log
 
 // KV are key value pairs to be logged
-type KV map[string]interface{}
+// type KV map[string]interface{}
+type KV struct {
+	K string
+	V interface{}
+}
 
 // InfoWriter for logs
 type InfoWriter interface {
