@@ -97,14 +97,14 @@ func TestDefaultStaticOperations(t *testing.T) {
 	SetDefaultLogger(nl)
 
 	testMsg := "message1"
-	testKV := []KV{KV{"a", "1"}, KV{"b", "2"}}
+	testKV := []KV{{"a", "1"}, {"b", "2"}}
 	Info(testMsg, testKV...)
 
 	assert.Equal(t, testMsg, nl.lastMsg)
 	assert.Equal(t, testKV, nl.lastKV)
 
 	testMsg = "message2"
-	testKV = []KV{KV{"d", "3"}, KV{"e", "4"}}
+	testKV = []KV{{"d", "3"}, {"e", "4"}}
 	testError := errors.New("test error")
 	Error(testError, testMsg, testKV...)
 
