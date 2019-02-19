@@ -28,11 +28,17 @@ func TestNoLog(t *testing.T) {
 		os.Stderr = stderr
 	}()
 
+	nl.Info(
+		"message for test log",
+		KV{"a", "1"}, KV{"b", "2"},
+	)
 	nl.Error(
 		errors.New("test error"),
 		"message for test error",
 		KV{"a", "1"}, KV{"b", "2"},
 	)
+	nl.SetLevel(5)
+
 	wOut.Close()
 	wErr.Close()
 
@@ -47,4 +53,8 @@ func TestNoLog(t *testing.T) {
 		t.Errorf("NoLog.Error returned %q at stderr when empty string was expected", bufErr.String())
 	}
 
+	nl2 := nl.V(1)
+	if (InfoWriter)(&nl) != nl2.(Logger) {
+		t.Errorf("V returned the a different logger")
+	}
 }
